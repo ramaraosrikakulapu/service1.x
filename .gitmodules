@@ -1,6 +1,6 @@
 [submodule "ec-web-ui"]
 	path = ec-web-ui
-	url = https://gitlab.com/digital-fo/connectivity/enterprise-connect/predix/ec-px-service-webui.git
+	url = https://gitlab.com/ec-release/cf-service-webui.git
 [submodule "assets"]
 	path = assets
-	url = https://gitlab.com/digital-fo/connectivity/enterprise-connect/predix/ec-px-service-assets.git
+	url = https://gitlab.com/ec-release/cf-service-assets.git
