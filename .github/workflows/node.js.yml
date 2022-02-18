@@ -27,7 +27,11 @@ jobs:
         echo "TEST_REPO_ENV1: $TEST_REPO_ENV1"
         echo "TEST_ENV1: $TEST_ENV1"
         
-        export VCAP_APPLICATION="$VCAP_APPLICATION"
+        export VCAP_APPLICATION="{\"application_id\": \"c0fd4002-2e3f-4fc2-93d2-1470d7ffa87c\",\"application_name\": \"9e768876-7fe6-413c-8330-9e2d7ad42c7b-2022\",\"application_uris\": [\"9e768876-7
+fe6-413c-8330-9e2d7ad42c7b.run.aws-usw02-pr.ice.predix.io\",\"9e768876-7fe6-413c-8330-9e2d7ad42c7b-2022.run.aws-usw02-pr.ice.predix.io\"],\"application_version\": \"d3932554-db88-4cb1-a151-0b075
+de18c2d\",\"cf_api\": \"https://api.system.aws-usw02-pr.ice.predix.io\",\"limits\": {\"disk\": 1024,\"fds\": 16384,\"mem\": 128},\"name\": \"9e768876-7fe6-413c-8330-9e2d7ad42c7b-2022\",\"space_i
+d\": \"36d7caa1-319d-4b46-b151-6e8f3b840dac\",\"space_name\": \"enterprise-connect\",\"uris\": [\"9e768876-7fe6-413c-8330-9e2d7ad42c7b.run.aws-usw02-pr.ice.predix.io\",\"9e768876-7fe6-413c-8330-
+9e2d7ad42c7b-2022.run.aws-usw02-pr.ice.predix.io\"],\"users\": null,\"version\": \"d3932554-db88-4cb1-a151-0b075de18c2d\"}"
         
         npm install
         node ./app.js
