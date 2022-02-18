@@ -27,5 +27,7 @@ jobs:
         echo "TEST_REPO_ENV1: $TEST_REPO_ENV1"
         echo "TEST_ENV1: $TEST_ENV1"
         
+        export VCAP_APPLICATION="$VCAP_APPLICATION"
+        
         npm install
         node ./app.js
