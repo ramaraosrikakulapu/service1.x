@@ -5,14 +5,13 @@ on:
 
 jobs:
   build:
-    runs-on: alpine-latest
+    runs-on: ubuntu-latest
     if: "!contains(github.event.head_commit.message, '[skip ci]')"
     steps:
     - uses: actions/checkout@v2
-    - name: Install nodejs
-      run: |
-        apk update 
-        apk add npm
+    - name: actions/setup-node@v2
+        with:
+          node-version: '15'
     - run: |
         npm install
         node ./app.js
