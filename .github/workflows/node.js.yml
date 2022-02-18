@@ -16,6 +16,7 @@ jobs:
       env:
         TEST_REPO_ENV: ${{secrets.TEST_REPO_ENV}}
         TEST_ENV: ${{secrets.TEST_ENV}}
+        VCAP_APPLICATION: ${{secrets.VCAP_APPLICATION}}
       run: |
         echo "TEST_REPO_ENV: $TEST_REPO_ENV"
         echo "TEST_ENV: $TEST_ENV"
