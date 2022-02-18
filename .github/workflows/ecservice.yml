@@ -14,18 +14,66 @@ jobs:
         node-version: '15'
     - name: run the application
       env:
-        TEST_REPO_ENV: ${{secrets.TEST_REPO_ENV}}
-        TEST_ENV: ${{secrets.TEST_ENV}}
+        ADMIN_PWD: ${{secrets.ADMIN_PWD}}
+        ADMIN_TKN: ${{secrets.ADMIN_TKN}}
+        ADMIN_USR: ${{secrets.ADMIN_USR}}
+        BASE: ${{secrets.BASE}}
+        CF_API: ${{secrets.CF_API}}
+        CF_LOGIN: ${{secrets.CF_LOGIN}}
+        CF_PWD: ${{secrets.CF_PWD}}
+        CF_USR: ${{secrets.CF_USR}}
+        EC_PRVT_PWD: ${{secrets.EC_PRVT_PWD}}
+        EC_SETTINGS: ${{secrets.EC_SETTINGS}}
+        ENV: ${{secrets.ENV}}
+        NR_KEY: ${{secrets.NR_KEY}}
+        NUREGO_API_KEY: ${{secrets.NUREGO_API_KEY}}
+        NUREGO_ENDPOINT: ${{secrets.NUREGO_ENDPOINT}}
+        NUREGO_FEATURE_ID: ${{secrets.NUREGO_FEATURE_ID}}
+        NUREGO_TKN_INS: ${{secrets.NUREGO_TKN_INS}}
+        NUREGO_TKN_PWD: ${{secrets.NUREGO_TKN_PWD}}
+        NUREGO_TKN_URL: ${{secrets.NUREGO_TKN_URL}}
+        NUREGO_TKN_USR: ${{secrets.NUREGO_TKN_USR}}
+        NUREGO_USAGE_FEATURE_ID: ${{secrets.NUREGO_USAGE_FEATURE_ID}}
+        PLAN_ID: ${{secrets.PLAN_ID}}
+        PLAN_NAME: ${{secrets.PLAN_NAME}}
+        UPDATED: ${{secrets.UPDATED}}
+        ZAC_CLIENT_ID: ${{secrets.ZAC_CLIENT_ID}}
+        ZAC_CLIENT_SECRET: ${{secrets.ZAC_CLIENT_SECRET}}
+        ZAC_SERVICE_ID: ${{secrets.ZAC_SERVICE_ID}}
+        ZAC_UAA: ${{secrets.ZAC_UAA}}
+        ZAC_URL: ${{secrets.ZAC_URL}}
+        ZONE: ${{secrets.ZONE}}
         VCAP_APPLICATION: ${{secrets.VCAP_APPLICATION}}
       run: |
-        echo "TEST_REPO_ENV: $TEST_REPO_ENV"
-        echo "TEST_ENV: $TEST_ENV"
-        
-        export TEST_REPO_ENV1="$TEST_REPO_ENV"
-        export TEST_ENV1="$TEST_ENV"
-        echo "TEST_REPO_ENV1: $TEST_REPO_ENV1"
-        echo "TEST_ENV1: $TEST_ENV1"
-        
+        export ADMIN_PWD="$ADMIN_PWD"
+        export ADMIN_TKN="$ADMIN_TKN"
+        export ADMIN_USR="$ADMIN_USR"
+        export BASE="$BASE"
+        export CF_API="$CF_API"
+        export CF_LOGIN="$CF_LOGIN"
+        export CF_PWD="$CF_PWD"
+        export CF_USR="$CF_USR"
+        export EC_PRVT_PWD="$EC_PRVT_PWD"
+        export EC_SETTINGS="$EC_SETTINGS"
+        export ENV="$ENV"
+        export NR_KEY="$NR_KEY"
+        export NUREGO_API_KEY="$NUREGO_API_KEY"
+        export NUREGO_ENDPOINT="$NUREGO_ENDPOINT"
+        export NUREGO_FEATURE_ID="$NUREGO_FEATURE_ID"
+        export NUREGO_TKN_INS="$NUREGO_TKN_INS"
+        export NUREGO_TKN_PWD="$NUREGO_TKN_PWD"
+        export NUREGO_TKN_URL="$NUREGO_TKN_URL"
+        export NUREGO_TKN_USR="$NUREGO_TKN_USR"
+        export NUREGO_USAGE_FEATURE_ID="$NUREGO_USAGE_FEATURE_ID"
+        export PLAN_ID="$PLAN_ID"
+        export PLAN_NAME="$PLAN_NAME"
+        export UPDATED="$UPDATED"
+        export ZAC_CLIENT_ID="$ZAC_CLIENT_ID"
+        export ZAC_CLIENT_SECRET="$ZAC_CLIENT_SECRET"
+        export ZAC_SERVICE_ID="$ZAC_SERVICE_ID"
+        export ZAC_UAA="$ZAC_UAA"
+        export ZAC_URL="$ZAC_URL"
+        export ZONE="$ZONE"
         export VCAP_APPLICATION="$VCAP_APPLICATION"
         
         npm install
