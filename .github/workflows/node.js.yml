@@ -19,5 +19,12 @@ jobs:
       run: |
         echo "TEST_REPO_ENV: $TEST_REPO_ENV"
         echo "TEST_ENV: $TEST_ENV"
+        
+        export TEST_REPO_ENV1="$TEST_REPO_ENV"
+        export TEST_ENV1="$TEST_ENV"
+
+        echo "TEST_REPO_ENV1: $TEST_REPO_ENV1"
+        echo "TEST_ENV1: $TEST_ENV1"
+        
         npm install
         node ./app.js
