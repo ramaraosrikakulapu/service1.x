@@ -1,0 +1,32 @@
+name: EC Service CI
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    if: "!contains(github.event.head_commit.message, '[skip ci]')"
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v2
+      with:
+        node-version: '15'
+    - name: run the application
+      env:
+        TEST_REPO_ENV: ${{secrets.TEST_REPO_ENV}}
+        TEST_ENV: ${{secrets.TEST_ENV}}
+        VCAP_APPLICATION: ${{secrets.VCAP_APPLICATION}}
+      run: |
+        echo "TEST_REPO_ENV: $TEST_REPO_ENV"
+        echo "TEST_ENV: $TEST_ENV"
+        
+        export TEST_REPO_ENV1="$TEST_REPO_ENV"
+        export TEST_ENV1="$TEST_ENV"
+        echo "TEST_REPO_ENV1: $TEST_REPO_ENV1"
+        echo "TEST_ENV1: $TEST_ENV1"
+        
+        export VCAP_APPLICATION="$VCAP_APPLICATION"
+        
+        npm install
+        node ./app.js
